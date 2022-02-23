@@ -8,5 +8,9 @@
 import UIKit
 
 class OrangeViewController: UIViewController {
-
+     
+     @IBAction func close(_ sender: UIButton) {
+         dismiss(animated: true)
+     }
+    
 }
