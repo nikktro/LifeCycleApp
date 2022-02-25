@@ -16,6 +16,8 @@ class GreenViewController: UIViewController {
     // Called after the View is loaded into memory
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Green VC"
+        printMessage()
     }
     
     // Called before the View appears
@@ -45,4 +47,10 @@ class GreenViewController: UIViewController {
     // Called after the view is hidden
 
     
+}
+
+extension GreenViewController {
+    func printMessage(function: String = #function) {
+        print("\(title ?? ""): \(function)")
+    }
 }
