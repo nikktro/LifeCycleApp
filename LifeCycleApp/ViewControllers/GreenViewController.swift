@@ -21,19 +21,29 @@ class GreenViewController: UIViewController {
     }
     
     // Called before the View appears
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        printMessage()
+    }
     
     // Called when placing constraints
-
+    override func updateViewConstraints() {
+        printMessage()
+        super.updateViewConstraints()
+    }
     
     // Called before placing all elements on the screen
-
+    override func viewWillLayoutSubviews() {
+        printMessage()
+    }
     
     // This is where Auto Layout comes in
     
     
     // Called after all items on the screen have been placed
-    
+    override func viewDidLayoutSubviews() {
+        printMessage()
+    }
     
     // Called after the view appears on the screen
     
@@ -51,6 +61,17 @@ class GreenViewController: UIViewController {
 
 extension GreenViewController {
     func printMessage(function: String = #function) {
-        print("\(title ?? ""): \(function)")
+        print("\(title ?? ""): \(function) \(String.timestamp())")
+    }
+}
+
+extension String {
+    static func timestamp() -> String {
+        let dateFMT = DateFormatter()
+        dateFMT.locale = Locale(identifier: "en_US_POSIX")
+        dateFMT.dateFormat = "yyyy-MM-dd' 'HH:mm:ss.SSSS"
+        let now = Date()
+
+        return String(format: "%@", dateFMT.string(from: now))
     }
 }
