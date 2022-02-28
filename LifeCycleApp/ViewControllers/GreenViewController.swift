@@ -29,7 +29,7 @@ class GreenViewController: UIViewController {
         printMessage()
     }
     
-    //
+    // Manual view initialisation
     override func loadView() {
         super.loadView()
         printMessage()
