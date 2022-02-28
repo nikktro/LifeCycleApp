@@ -30,10 +30,10 @@ class GreenViewController: UIViewController {
     }
     
     // Manual view initialisation
-    override func loadView() {
-        super.loadView()
-        printMessage()
-    }
+//    override func loadView() {
+//        super.loadView()
+//        printMessage()
+//    }
     
     // Called after the View is loaded into memory
     override func viewDidLoad() {
