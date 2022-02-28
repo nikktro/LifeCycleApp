@@ -11,6 +11,6 @@ class YellowViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greenVC = segue.destination as? GreenViewController else { return }
-        greenVC.someProperties = "someProperties"
+        greenVC.someProperty = "someProperty"
     }
 }
