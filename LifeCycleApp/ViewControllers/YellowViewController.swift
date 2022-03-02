@@ -10,6 +10,7 @@ import UIKit
 class YellowViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        printMessage()
         guard let greenVC = segue.destination as? GreenViewController else { return }
         greenVC.someProperty = "someProperty"
     }
