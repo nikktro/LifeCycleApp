@@ -11,14 +11,14 @@ class GreenViewController: UIViewController {
     
     @IBOutlet var openThirdVC: UIButton! {
         didSet {
-            print(openThirdVC.currentTitle ?? "")
+            print("Outlet init: \(openThirdVC.currentTitle ?? "")")
             printMessage()
         }
     }
     
     var someProperty: String! {
         didSet {
-            print(someProperty ?? "")
+            print("Public property init: \(someProperty ?? "")")
             printMessage()
         }
     }
@@ -26,6 +26,7 @@ class GreenViewController: UIViewController {
     // Called before property initialisation
     override func awakeFromNib() {
         super.awakeFromNib()
+        title = "Green VC"
         printMessage()
     }
     
@@ -38,7 +39,6 @@ class GreenViewController: UIViewController {
     // Called after the View is loaded into memory
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Green VC"
         printMessage()
     }
     
