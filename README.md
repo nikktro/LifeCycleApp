@@ -1,6 +1,7 @@
 # LifeCycleApp
 
-Test Application from lesson 2.08 
+Test Application from lesson 2.08
+<br />
 A simple application in which you can monitor the life cycle through the console
 <br />
 
